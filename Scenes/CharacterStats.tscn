@@ -1,0 +1,1020 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://gui/Figma elements/inventory/title1.png" type="Texture" id=1]
+[ext_resource path="res://gui/Figma elements/character/border.png" type="Texture" id=2]
+[ext_resource path="res://gui/Figma elements/character/framecorner copy 6.png" type="Texture" id=3]
+[ext_resource path="res://gui/Figma elements/Options/setting/bolt1 1.png" type="Texture" id=4]
+[ext_resource path="res://gui/comleate elements/character/devaider.png" type="Texture" id=5]
+[ext_resource path="res://gui/comleate elements/character/fiels small.png" type="Texture" id=6]
+[ext_resource path="res://gui/TechnicznaPomocR.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://gui/Guardians.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://gui/comleate elements/character/field copy 8.png" type="Texture" id=9]
+[ext_resource path="res://gui/comleate elements/character/man.png" type="Texture" id=10]
+[ext_resource path="res://gui/comleate elements/character/border inner.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/CharacterStatsUi.cs" type="Script" id=12]
+[ext_resource path="res://gui/Figma elements/inventory/bg2.png" type="Texture" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+outline_size = 1
+outline_color = Color( 0.337255, 0.380392, 0.152941, 0.415686 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 23
+font_data = ExtResource( 7 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 256, 429 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+outline_color = Color( 0.439216, 0.486275, 0.247059, 1 )
+use_filter = true
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 23
+font_data = ExtResource( 8 )
+
+[sub_resource type="CanvasItemMaterial" id=7]
+
+[sub_resource type="CanvasItemMaterial" id=8]
+blend_mode = 1
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.882353, 0.835294, 0.129412, 1 )
+border_color = Color( 0.0588235, 0.0588235, 0.0588235, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 20
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.831373, 0.152941, 0.0980392, 1 )
+border_color = Color( 0.0588235, 0.0588235, 0.0588235, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.137255, 0.615686, 0.239216, 1 )
+border_color = Color( 0.0588235, 0.0588235, 0.0588235, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 20
+
+[node name="Character" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -641.0
+margin_bottom = -203.0
+theme = SubResource( 2 )
+script = ExtResource( 12 )
+
+[node name="Bg2" type="TextureRect" parent="."]
+anchor_left = 0.02
+anchor_top = 0.033
+anchor_right = 0.98
+anchor_bottom = 0.966
+margin_left = -0.580002
+margin_top = 0.059
+margin_right = 0.579956
+margin_bottom = 41.818
+rect_min_size = Vector2( 0, 860 )
+texture = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WINDOW" type="NinePatchRect" parent="."]
+anchor_top = 0.003
+anchor_right = 1.0
+anchor_bottom = 0.997
+margin_left = -1.5
+margin_top = -0.158
+margin_right = 1.5
+margin_bottom = 0.157959
+rect_min_size = Vector2( 1175, 881 )
+texture = ExtResource( 2 )
+patch_margin_left = 119
+patch_margin_top = 90
+patch_margin_right = 121
+patch_margin_bottom = 116
+
+[node name="TITLE" type="TextureRect" parent="WINDOW"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -303.5
+margin_top = -68.0
+margin_right = 308.5
+margin_bottom = 23.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="WINDOW/TITLE"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -178.0
+margin_top = -19.5
+margin_right = 175.0
+margin_bottom = 15.5
+custom_colors/font_color = Color( 0.303711, 0.103055, 0.008008, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "CHARACTER"
+align = 1
+valign = 1
+
+[node name="CONTENT" type="HSplitContainer" parent="WINDOW"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -587.5
+margin_top = -466.0
+margin_right = 587.5
+margin_bottom = 466.0
+custom_constants/separation = 90
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ARMOR" type="Control" parent="WINDOW/CONTENT"]
+margin_right = 500.0
+margin_bottom = 932.0
+rect_min_size = Vector2( 500, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AVATAR" type="TextureRect" parent="WINDOW/CONTENT/ARMOR"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -137.5
+margin_top = -350.5
+margin_right = 137.5
+margin_bottom = 350.5
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FACE" type="TextureRect" parent="WINDOW/CONTENT/ARMOR"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -44.0
+margin_top = -321.5
+margin_right = 47.0
+margin_bottom = -232.5
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L_SCAPULAR" type="TextureRect" parent="WINDOW/CONTENT/ARMOR"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -148.0
+margin_top = -217.5
+margin_right = -57.0
+margin_bottom = -128.5
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L_HAND" type="TextureRect" parent="WINDOW/CONTENT/ARMOR"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -163.0
+margin_top = -22.5
+margin_right = -72.0
+margin_bottom = 66.5
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L_KNEE" type="TextureRect" parent="WINDOW/CONTENT/ARMOR"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -84.0
+margin_top = 113.5
+margin_right = 7.0
+margin_bottom = 202.5
+texture = ExtResource( 9 )
+
+[node name="L_FOOT" type="TextureRect" parent="WINDOW/CONTENT/ARMOR"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -89.0
+margin_top = 267.5
+margin_right = 2.0
+margin_bottom = 356.5
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="R_SCAPULAR" type="TextureRect" parent="WINDOW/CONTENT/ARMOR"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 49.0
+margin_top = -219.5
+margin_right = 140.0
+margin_bottom = -130.5
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="R_HAND" type="TextureRect" parent="WINDOW/CONTENT/ARMOR"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 66.0
+margin_top = -38.5
+margin_right = 157.0
+margin_bottom = 50.5
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="R_KNEE" type="TextureRect" parent="WINDOW/CONTENT/ARMOR"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 26.0
+margin_top = 115.5
+margin_right = 117.0
+margin_bottom = 204.5
+texture = ExtResource( 9 )
+
+[node name="R_FOOT" type="TextureRect" parent="WINDOW/CONTENT/ARMOR"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 49.0
+margin_top = 263.5
+margin_right = 140.0
+margin_bottom = 352.5
+texture = ExtResource( 9 )
+
+[node name="BODY" type="TextureRect" parent="WINDOW/CONTENT/ARMOR"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -46.0
+margin_top = -218.5
+margin_right = 45.0
+margin_bottom = -129.5
+texture = ExtResource( 9 )
+
+[node name="BELT" type="TextureRect" parent="WINDOW/CONTENT/ARMOR"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.0
+margin_top = -71.5
+margin_right = 43.0
+margin_bottom = 17.5
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="STATS_PANEL" type="Control" parent="WINDOW/CONTENT"]
+margin_left = 590.0
+margin_right = 1175.0
+margin_bottom = 932.0
+rect_min_size = Vector2( 500, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="___" type="TextureRect" parent="WINDOW/CONTENT/STATS_PANEL"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.5
+margin_top = -324.0
+margin_right = 201.5
+margin_bottom = 303.0
+texture = SubResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="____" type="TextureRect" parent="WINDOW/CONTENT/STATS_PANEL"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -214.5
+margin_top = -355.0
+margin_right = 214.5
+margin_bottom = 344.0
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TITLE" type="NinePatchRect" parent="WINDOW/CONTENT/STATS_PANEL"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -188.5
+margin_top = -319.0
+margin_right = 188.5
+margin_bottom = -245.0
+texture = ExtResource( 6 )
+patch_margin_left = 5
+patch_margin_top = 6
+patch_margin_right = 5
+patch_margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/TITLE"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -190.0
+margin_top = -30.5
+margin_right = 190.0
+margin_bottom = 30.5
+custom_colors/font_color = Color( 0.958724, 1, 0.69043, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "STATS"
+align = 1
+valign = 1
+
+[node name="NAME_LVL" type="Label" parent="WINDOW/CONTENT/STATS_PANEL"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -169.5
+margin_top = -230.0
+margin_right = 169.5
+margin_bottom = -176.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "SOLDIER 30 LVL"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="___" type="TextureRect" parent="WINDOW/CONTENT/STATS_PANEL/NAME_LVL"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -179.5
+margin_top = -14.0
+margin_right = 179.5
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="STATS" type="VBoxContainer" parent="WINDOW/CONTENT/STATS_PANEL"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -168.5
+margin_top = -154.5
+margin_right = 168.5
+margin_bottom = -77.5
+custom_constants/separation = 13
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LVL" type="HBoxContainer" parent="WINDOW/CONTENT/STATS_PANEL/STATS"]
+margin_right = 337.0
+margin_bottom = 17.0
+custom_constants/separation = 8
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="NAME" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/STATS/LVL"]
+margin_right = 45.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 45, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "lvl"
+
+[node name="PROGRRES" type="NinePatchRect" parent="WINDOW/CONTENT/STATS_PANEL/STATS/LVL"]
+material = SubResource( 7 )
+margin_left = 53.0
+margin_right = 303.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 250, 0 )
+texture = ExtResource( 6 )
+patch_margin_left = 5
+patch_margin_top = 6
+patch_margin_right = 5
+patch_margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BAR" type="ProgressBar" parent="WINDOW/CONTENT/STATS_PANEL/STATS/LVL/PROGRRES"]
+material = SubResource( 8 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/fg = SubResource( 9 )
+custom_styles/bg = SubResource( 10 )
+value = 45.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VALUE" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/STATS/LVL"]
+margin_left = 311.0
+margin_right = 335.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "20"
+
+[node name="XP" type="HBoxContainer" parent="WINDOW/CONTENT/STATS_PANEL/STATS"]
+margin_top = 30.0
+margin_right = 337.0
+margin_bottom = 47.0
+custom_constants/separation = 8
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="NAME" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/STATS/XP"]
+margin_right = 45.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 45, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "XP"
+
+[node name="PROGRRES" type="NinePatchRect" parent="WINDOW/CONTENT/STATS_PANEL/STATS/XP"]
+material = SubResource( 7 )
+margin_left = 53.0
+margin_right = 303.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 250, 0 )
+texture = ExtResource( 6 )
+patch_margin_left = 5
+patch_margin_top = 6
+patch_margin_right = 5
+patch_margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BAR" type="ProgressBar" parent="WINDOW/CONTENT/STATS_PANEL/STATS/XP/PROGRRES"]
+material = SubResource( 8 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/fg = SubResource( 11 )
+custom_styles/bg = SubResource( 10 )
+value = 65.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VALUE" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/STATS/XP"]
+margin_left = 311.0
+margin_right = 335.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "90"
+
+[node name="EN" type="HBoxContainer" parent="WINDOW/CONTENT/STATS_PANEL/STATS"]
+margin_top = 60.0
+margin_right = 337.0
+margin_bottom = 77.0
+custom_constants/separation = 8
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="NAME" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/STATS/EN"]
+margin_right = 45.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 45, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "EN"
+
+[node name="PROGRRES" type="NinePatchRect" parent="WINDOW/CONTENT/STATS_PANEL/STATS/EN"]
+material = SubResource( 7 )
+margin_left = 53.0
+margin_right = 303.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 250, 0 )
+texture = ExtResource( 6 )
+patch_margin_left = 5
+patch_margin_top = 6
+patch_margin_right = 5
+patch_margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BAR" type="ProgressBar" parent="WINDOW/CONTENT/STATS_PANEL/STATS/EN/PROGRRES"]
+material = SubResource( 8 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/fg = SubResource( 12 )
+custom_styles/bg = SubResource( 10 )
+value = 20.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VALUE" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/STATS/EN"]
+margin_left = 311.0
+margin_right = 337.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "110"
+
+[node name="CHARACTERISTIC" type="VBoxContainer" parent="WINDOW/CONTENT/STATS_PANEL"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -188.0
+margin_top = -49.0
+margin_right = 188.0
+margin_bottom = 137.0
+custom_constants/separation = 0
+alignment = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="_________7" type="TextureRect" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC"]
+margin_right = 376.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 0, 12 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="STRENGTH" type="HBoxContainer" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC"]
+margin_top = 12.0
+margin_right = 376.0
+margin_bottom = 29.0
+custom_constants/separation = 11
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NAME" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/STRENGTH"]
+margin_left = 94.0
+margin_right = 214.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 120, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "STRENGTH"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VALUE" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/STRENGTH"]
+margin_left = 225.0
+margin_right = 256.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/STRENGTH"]
+margin_left = 267.0
+margin_right = 281.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 14, 14 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="_________6" type="TextureRect" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC"]
+margin_top = 29.0
+margin_right = 376.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 0, 12 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AGILITY" type="HBoxContainer" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC"]
+margin_top = 41.0
+margin_right = 376.0
+margin_bottom = 58.0
+custom_constants/separation = 11
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NAME" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/AGILITY"]
+margin_left = 94.0
+margin_right = 214.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 120, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "AGILITY"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VALUE" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/AGILITY"]
+margin_left = 225.0
+margin_right = 256.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton2" type="TextureButton" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/AGILITY"]
+margin_left = 267.0
+margin_right = 281.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 14, 14 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="_________5" type="TextureRect" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC"]
+margin_top = 58.0
+margin_right = 376.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 0, 12 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="INTUITION" type="HBoxContainer" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC"]
+margin_top = 70.0
+margin_right = 376.0
+margin_bottom = 87.0
+custom_constants/separation = 11
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NAME" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/INTUITION"]
+margin_left = 94.0
+margin_right = 214.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 120, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "INTUITION"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VALUE" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/INTUITION"]
+margin_left = 225.0
+margin_right = 256.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton3" type="TextureButton" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/INTUITION"]
+margin_left = 267.0
+margin_right = 281.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 14, 14 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="_________4" type="TextureRect" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC"]
+margin_top = 87.0
+margin_right = 376.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 0, 12 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="STAMINA" type="HBoxContainer" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC"]
+margin_top = 99.0
+margin_right = 376.0
+margin_bottom = 116.0
+custom_constants/separation = 11
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NAME" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/STAMINA"]
+margin_left = 94.0
+margin_right = 214.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 120, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "STAMINA"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VALUE" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/STAMINA"]
+margin_left = 225.0
+margin_right = 256.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton4" type="TextureButton" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/STAMINA"]
+margin_left = 267.0
+margin_right = 281.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 14, 14 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="_________3" type="TextureRect" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC"]
+margin_top = 116.0
+margin_right = 376.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 12 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ACCURACY" type="HBoxContainer" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC"]
+margin_top = 128.0
+margin_right = 376.0
+margin_bottom = 145.0
+custom_constants/separation = 11
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NAME" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/ACCURACY"]
+margin_left = 94.0
+margin_right = 214.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 120, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ACCURACY"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VALUE" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/ACCURACY"]
+margin_left = 225.0
+margin_right = 256.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton5" type="TextureButton" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/ACCURACY"]
+margin_left = 267.0
+margin_right = 281.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 14, 14 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="_________2" type="TextureRect" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC"]
+margin_top = 145.0
+margin_right = 376.0
+margin_bottom = 157.0
+rect_min_size = Vector2( 0, 12 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="INTELLECT" type="HBoxContainer" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC"]
+margin_top = 157.0
+margin_right = 376.0
+margin_bottom = 174.0
+custom_constants/separation = 11
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NAME" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/INTELLECT"]
+margin_left = 94.0
+margin_right = 214.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 120, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "INTELLECT"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VALUE" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/INTELLECT"]
+margin_left = 225.0
+margin_right = 256.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton6" type="TextureButton" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC/INTELLECT"]
+margin_left = 267.0
+margin_right = 281.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 14, 14 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="_________" type="TextureRect" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC"]
+margin_top = 174.0
+margin_right = 376.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 0, 12 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CHARACTERISTIC2" type="VBoxContainer" parent="WINDOW/CONTENT/STATS_PANEL"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -177.0
+margin_top = 185.0
+margin_right = 177.0
+margin_bottom = 231.0
+custom_constants/separation = 0
+alignment = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ATTACK" type="HBoxContainer" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC2"]
+margin_right = 354.0
+margin_bottom = 17.0
+custom_constants/separation = 11
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC2/ATTACK"]
+margin_left = 96.0
+margin_right = 216.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 120, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ATTACK"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC2/ATTACK"]
+margin_left = 227.0
+margin_right = 258.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="_________6" type="TextureRect" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC2"]
+margin_top = 17.0
+margin_right = 354.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 0, 12 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DEFENCE" type="HBoxContainer" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC2"]
+margin_top = 29.0
+margin_right = 354.0
+margin_bottom = 46.0
+custom_constants/separation = 11
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC2/DEFENCE"]
+margin_left = 96.0
+margin_right = 216.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 120, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "DEFENCE"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="WINDOW/CONTENT/STATS_PANEL/CHARACTERISTIC2/DEFENCE"]
+margin_left = 227.0
+margin_right = 258.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,354 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://gui/Figma elements/reg/fiels 1.png" type="Texture" id=1]
+[ext_resource path="res://gui/Figma elements/reg/title2 1.png" type="Texture" id=2]
+[ext_resource path="res://gui/Figma elements/Options/bolt_X_button.png" type="Texture" id=3]
+[ext_resource path="res://gui/comleate elements/quests/bg2.png" type="Texture" id=4]
+[ext_resource path="res://gui/Figma elements/reg/border 2.png" type="Texture" id=5]
+[ext_resource path="res://gui/Figma elements/reg/button_11.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Registration.cs" type="Script" id=7]
+[ext_resource path="res://gui/TechnicznaPomocR.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://gui/TechnicznaPomoc.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://gui/Figma elements/reg/button_11_Press.png" type="Texture" id=10]
+[ext_resource path="res://gui/Figma elements/reg/button_11_Hover.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=3]
+size = 13
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 12
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="DynamicFont" id=5]
+size = 19
+font_data = ExtResource( 8 )
+
+[node name="Registration" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = 2.0
+margin_right = -1481.0
+margin_bottom = -608.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bg2" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -316.0
+margin_top = -261.0
+margin_right = 322.0
+margin_bottom = 262.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Border2" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -192.5
+margin_top = -237.0
+margin_right = 192.5
+margin_bottom = 237.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title21" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -175.0
+margin_top = -273.5
+margin_right = 177.0
+margin_bottom = -222.5
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Title21"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = -9.0
+margin_right = 112.0
+margin_bottom = 9.0
+custom_colors/font_color = Color( 0.0156863, 0.0156863, 0.00784314, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "REGISTRATION"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="XButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -18.5
+margin_top = -18.5
+margin_right = 18.5
+margin_bottom = 18.5
+texture_normal = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fields" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -90.0
+margin_top = -166.0
+margin_right = 90.0
+margin_bottom = 78.0
+custom_constants/separation = 12
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Field" type="VBoxContainer" parent="Fields"]
+margin_right = 180.0
+margin_bottom = 52.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Login" type="Label" parent="Fields/Field"]
+margin_right = 180.0
+margin_bottom = 18.0
+custom_colors/font_color = Color( 0.823242, 0.794427, 0.275754, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "USERNAME"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fiels2" type="TextureRect" parent="Fields/Field"]
+margin_top = 22.0
+margin_right = 180.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 0, 30 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoginField" type="TextEdit" parent="Fields/Field/Fiels2"]
+anchor_left = 0.024
+anchor_top = 0.1
+anchor_right = 0.976
+anchor_bottom = 0.9
+margin_left = -0.0320001
+margin_right = 0.0319824
+margin_bottom = -1.90735e-06
+rect_min_size = Vector2( 0, 20 )
+custom_colors/font_color = Color( 0.776471, 0.756863, 0.309804, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+context_menu_enabled = false
+shortcut_keys_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Field2" type="VBoxContainer" parent="Fields"]
+margin_top = 64.0
+margin_right = 180.0
+margin_bottom = 116.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Login" type="Label" parent="Fields/Field2"]
+margin_right = 180.0
+margin_bottom = 18.0
+custom_colors/font_color = Color( 0.823242, 0.794427, 0.275754, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "PASSWORD"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fiels2" type="TextureRect" parent="Fields/Field2"]
+margin_top = 22.0
+margin_right = 180.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 0, 30 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoginField" type="TextEdit" parent="Fields/Field2/Fiels2"]
+anchor_left = 0.024
+anchor_top = 0.1
+anchor_right = 0.976
+anchor_bottom = 0.9
+margin_left = -0.0320001
+margin_right = 0.0319824
+margin_bottom = -1.90735e-06
+rect_min_size = Vector2( 0, 20 )
+custom_colors/font_color = Color( 0.776471, 0.756863, 0.309804, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+context_menu_enabled = false
+shortcut_keys_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Field3" type="VBoxContainer" parent="Fields"]
+margin_top = 128.0
+margin_right = 180.0
+margin_bottom = 180.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Login" type="Label" parent="Fields/Field3"]
+margin_right = 180.0
+margin_bottom = 18.0
+custom_colors/font_color = Color( 0.823242, 0.794427, 0.275754, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "CONFIRM PASSWORD"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fiels2" type="TextureRect" parent="Fields/Field3"]
+margin_top = 22.0
+margin_right = 180.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 0, 30 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoginField" type="TextEdit" parent="Fields/Field3/Fiels2"]
+anchor_left = 0.024
+anchor_top = 0.1
+anchor_right = 0.976
+anchor_bottom = 0.9
+margin_left = -0.0320001
+margin_right = 0.0319824
+margin_bottom = -1.90735e-06
+rect_min_size = Vector2( 0, 20 )
+custom_colors/font_color = Color( 0.776471, 0.756863, 0.309804, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+context_menu_enabled = false
+shortcut_keys_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Field4" type="VBoxContainer" parent="Fields"]
+margin_top = 192.0
+margin_right = 180.0
+margin_bottom = 244.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Login" type="Label" parent="Fields/Field4"]
+margin_right = 180.0
+margin_bottom = 18.0
+custom_colors/font_color = Color( 0.823242, 0.794427, 0.275754, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "EMAIL"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fiels2" type="TextureRect" parent="Fields/Field4"]
+margin_top = 22.0
+margin_right = 180.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 0, 30 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoginField" type="TextEdit" parent="Fields/Field4/Fiels2"]
+anchor_left = 0.024
+anchor_top = 0.1
+anchor_right = 0.976
+anchor_bottom = 0.9
+margin_left = -0.0320001
+margin_right = 0.0319824
+margin_bottom = -1.90735e-06
+rect_min_size = Vector2( 0, 20 )
+custom_colors/font_color = Color( 0.776471, 0.756863, 0.309804, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+context_menu_enabled = false
+shortcut_keys_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button11" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.5
+margin_top = 112.0
+margin_right = 75.5
+margin_bottom = 158.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+expand = true
+
+[node name="Label" type="Label" parent="Button11"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.213867, 0.118196, 0.0524225, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "REGISTRATE"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

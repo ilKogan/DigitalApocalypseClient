@@ -1,0 +1,9 @@
+C:\Users\Koda\Downloads\Telegram Desktop\GUI\TestClient\.mono\temp\bin\Debug\Test Client.dll
+C:\Users\Koda\Downloads\Telegram Desktop\GUI\TestClient\.mono\temp\bin\Debug\Test Client.pdb
+C:\Users\Koda\Downloads\Telegram Desktop\GUI\TestClient\.mono\temp\obj\Debug\Test Client.csproj.AssemblyReference.cache
+C:\Users\Koda\Downloads\Telegram Desktop\GUI\TestClient\.mono\temp\obj\Debug\Test Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Koda\Downloads\Telegram Desktop\GUI\TestClient\.mono\temp\obj\Debug\Test Client.AssemblyInfoInputs.cache
+C:\Users\Koda\Downloads\Telegram Desktop\GUI\TestClient\.mono\temp\obj\Debug\Test Client.AssemblyInfo.cs
+C:\Users\Koda\Downloads\Telegram Desktop\GUI\TestClient\.mono\temp\obj\Debug\Test Client.csproj.CoreCompileInputs.cache
+C:\Users\Koda\Downloads\Telegram Desktop\GUI\TestClient\.mono\temp\obj\Debug\Test Client.dll
+C:\Users\Koda\Downloads\Telegram Desktop\GUI\TestClient\.mono\temp\obj\Debug\Test Client.pdb
